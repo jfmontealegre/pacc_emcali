@@ -2,15 +2,16 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Contabilidad Regulatoria UENE</title>
+  <title>PACC EMCALI 2026</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Tableros UENE" />
+  <meta name="description" content="Tablero de Contabilidad Regulatoria UENE" />
 
+  <!-- Estilos mínimos para un embed limpio y responsive -->
   <style>
     :root{
-      --bg:#0b0d0f;
-      --maxw: 1400px;
-      --radius: 16px;
+      --bg:#0b0d0f;           /* fondo oscuro sobrio */
+      --maxw: 1400px;         /* ancho máximo en desktop */
+      --radius: 16px;         /* esquinas suaves */
       --shadow: 0 8px 24px rgba(0,0,0,.25);
     }
     html, body {
@@ -23,8 +24,7 @@
     .wrap {
       min-height: 100%;
       display: grid;
-      place-items: start center;
-      gap: 18px;
+      place-items: center;
       padding: 24px;
       box-sizing: border-box;
     }
@@ -51,16 +51,12 @@
       border-radius: 999px;
       color: #b6c2cf;
     }
-
-    /* Embeds */
+    /* Contenedor responsive con aspect-ratio 16:9 (ajústalo si tu reporte usa otro) */
     .embed {
       position: relative;
+      aspect-ratio: 16 / 9;
       width: 100%;
       background: #0e1116;
-      aspect-ratio: 16 / 9;      /* default */
-    }
-    .embed.pacc {
-      aspect-ratio: 1024 / 1060; /* ratio real del PACC */
     }
     .embed iframe {
       position: absolute;
@@ -69,7 +65,6 @@
       height: 100%;
       border: 0;
     }
-
     .card footer {
       padding: 10px 16px;
       border-top: 1px solid #1d232a;
@@ -96,54 +91,27 @@
 
 <body>
   <a class="sr-only" href="#contenido">Saltar al contenido</a>
-
-  <main class="wrap" id="contenido" aria-label="Tableros UENE">
-
-    <!-- TARJETA 1: Contabilidad Regulatoria -->
-    <section class="card" role="region" aria-label="Informe Power BI: Contabilidad Regulatoria UENE">
-      <header>
-        <h1 style="font-size:18px; margin:0; font-weight:600;">Contabilidad Regulatoria UENE</h1>
-        <span class="badge">Power BI</span>
-      </header>
-
-      <div class="embed">
-        <iframe
-          title="Contabilidad Regulatoria UENE"
-          src="https://app.powerbi.com/view?r=eyJrIjoiODY4Y2E4YWMtNjQyOS00YTFhLTg2MWYtM2ZlNDBiMmI1MTU1IiwidCI6Ijc2MzIwYzgyLTJlYmYtNGI2ZS04ZTVjLWRmMGUyMWQxOTZjOCIsImMiOjR9"
-          loading="lazy"
-          allowfullscreen
-        ></iframe>
-      </div>
-
-      <footer>
-        <span>EMCALI EICE ESP · UENE · Contabilidad Regulatoria</span>
-        <span>Uso interno</span>
-      </footer>
-    </section>
-
-    <!-- TARJETA 2: PACC -->
+  <main class="wrap" id="contenido" aria-label="PACC EMCALI 2026">
     <section class="card" role="region" aria-label="Informe Power BI: PACC EMCALI 2026">
       <header>
         <h1 style="font-size:18px; margin:0; font-weight:600;">PACC EMCALI 2026</h1>
         <span class="badge">Power BI</span>
       </header>
 
-      <div class="embed pacc">
+      <div class="embed">
         <iframe
-          title="PACC_EMCALI_2026"
-          src="https://app.powerbi.com/view?r=eyJrIjoiYjhkM2EwOTgtYzk5OC00MGQ5LTkxMjctZjcwNmM4NTM0YTM5IiwidCI6Ijc2MzIwYzgyLTJlYmYtNGI2ZS04ZTVjLWRmMGUyMWQxOTZjOCIsImMiOjR9"
-          frameborder="0"
+          title="PACC EMCALI 2026"
+          src=src="https://app.powerbi.com/view?r=eyJrIjoiYjhkM2EwOTgtYzk5OC00MGQ5LTkxMjctZjcwNmM4NTM0YTM5IiwidCI6Ijc2MzIwYzgyLTJlYmYtNGI2ZS04ZTVjLWRmMGUyMWQxOTZjOCIsImMiOjR9"
           loading="lazy"
           allowfullscreen
         ></iframe>
       </div>
 
       <footer>
-        <span>EMCALI EICE ESP · UENE · PACC</span>
+        <span>EMCALI EICE ESP · PACC EMCALI 2026</span>
         <span>Uso interno</span>
       </footer>
     </section>
-
   </main>
 </body>
 </html>
